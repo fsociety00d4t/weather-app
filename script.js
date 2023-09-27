@@ -13,7 +13,6 @@ async function getData(input) {
     displayLocation(data);
     displayDetails(data);
     displayForeCast(data);
-
   }catch (error) {
     displayError();
     console.log(error);
