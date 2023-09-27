@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Weather-App</title>
+  </head>
+  <body>
+    <div class="current-basics">
+      <h2 class="country"></h2>
+      <h3 class="region"></h3>
+      <h4 class="city"></h4>
+      <p class="time"></p>
+      <h2 class="temp"></h2>
+      <img class="basic-img" width="100px" height="100px" />
+      <form>
+        <input type="search" id="search" placeholder="Search a Location" />
+        <button type="submit" class="submit"></button>
+      </form>
+      <p class="error">Please Put a Valid city, Country or Region</p>
+    </div>
+
+    <div class="details">
+      <div class="container1">
+        <p>Feels Likes</p>
+        <h2 class="feels-like"></h2>
+      </div>
+
+      <div class="container2">
+        <p>humidity</p>
+        <h2 class="humidity"></h2>
+      </div>
+
+      <div class="container3">
+        <p>Wind Speed</p>
+        <h2 class="wind-speed"></h2>
+      </div>
+    </div>
+
+    <div class="forecast">
+      <div class="day-0">
+        <p class="day0"></p>
+        <h3 class="max0"></h3>
+        <h5 class="min0"></h5>
+        <img class="img-0" width="50px" height="50px" />
+      </div>
+      <div class="day-1">
+        <p class="day1"></p>
+        <h3 class="max1"></h3>
+        <h5 class="min1"></h5>
+        <img class="img-1" width="50px" height="50px" />
+      </div>
+    </div>
+  </body>
+</html>
