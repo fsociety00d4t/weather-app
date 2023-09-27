@@ -15,7 +15,7 @@ async function getData(input) {
     displayDetails(data);
     displayForeCast(data);
 
-  } catch (error) {
+  }catch (error) {
     displayError();
     console.log(error);
   }
