@@ -10,7 +10,6 @@ async function getData(input) {
        response = await fetch("https://api.weatherapi.com/v1/forecast.json?key=4b1ffd40c31a4aa6b18105851232409&q=Berlin&days=3",{mode:'cors'});
     }
     const data = await response.json();
-
     displayLocation(data);
     displayDetails(data);
     displayForeCast(data);
