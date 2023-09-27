@@ -5,16 +5,15 @@ async function getData(input) {
   //prettier-ignore
   try {
     if (input!=undefined) {
-       response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=4b1ffd40c31a4aa6b18105851232409&q=${input}&days=3`);
+       response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=4b1ffd40c31a4aa6b18105851232409&q=${input}&days=3`,{mode:'cors'});
     } else {
-       response = await fetch("http://api.weatherapi.com/v1/forecast.json?key=4b1ffd40c31a4aa6b18105851232409&q=Berlin&days=3");
+       response = await fetch("http://api.weatherapi.com/v1/forecast.json?key=4b1ffd40c31a4aa6b18105851232409&q=Berlin&days=3",{mode:'cors'});
     }
     const data = await response.json();
 
     displayLocation(data);
     displayDetails(data);
     displayForeCast(data);
-    changeToF(data);
 
   } catch (error) {
     displayError();
@@ -39,6 +38,8 @@ function displayLocation(data) {
 }
 
 function displayDetails(data) {
+  /* const wind_kph = data.current.wind_kph;
+    const wind_mph = data.current.wind_mph; */
   const feelsLike = (document.querySelector(".feels-like").textContent =
     data.current.feelslike_c + " °C");
   const humidity = (document.querySelector(".humidity").textContent =
@@ -104,11 +105,6 @@ function numberToWeekDay(day) {
       return "Saturday";
       break;
   }
-}
-
-function changeToF(data) {
-  const wind_mph = data.current.wind_mph;
-  return wind_mph;
 }
 
 const submit = document.querySelector(".submit");
